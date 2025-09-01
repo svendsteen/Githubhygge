@@ -1,17 +1,146 @@
+:root { 
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color12);
+    line-height: 1;
+    font-stretch: 100%;
+
+    /* Farvekoder fra hjemmesiden */
+    --bg-color00: #fff;/*background-color*/
+    --bg-color01: #eee;/*background-color*/
+    --color00: #fff;
+    --color01: #ebebe3;
+    --color02: #d1d0d0;
+    --color03: #828282;
+    --color04: #0e0f11;/*text color*/
+    --color05: #efd17a;
+    --color06: #f2474b;
+    --color07: #6c757d;
+    --color08: #3e9f6e;
+    --color09: #2d3545;
+    --color10: #999999;
+    --color11: #eddba4;
+    --color12: #000000;
+}
+
 body {
-background-color: #bfe9f5;
+    background-color: var(--color1);
+    color: var(--color04);
+    font: 400 20px/26px Roboto,Arial,sans-serif;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; /* fylder mindst hele viewport */
+      padding: 8rem;
 }
 
-h1 {
-font-size: 26px;
-color: blue;
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color00);
+    color: var(--color12);
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 5px solid var(--color01);
 }
 
-p {
-color: red;
-font-family: Cambria;
+.container__header {
+    max-width: 100%;   
+  
 }
 
-button{
-color:pink;
+.header__top {
+  color: var(--color07);
+  display: flex;
+    justify-content: space-between; /* logo venstre, nav højre */
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Logo */
+.header__logo img {
+    max-height: 200px;
+}
+
+/* Sekundær nav (top-nav) */
+.nav--secondary .nav__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav--secondary .nav__item a {
+    text-decoration: none;
+    color: var(--color04)
+    font-weight: 500;
+}
+
+/* Nederste sektion (primær nav) */
+.header__bottom {
+    display: flex;
+    justify-content: flex-start; /* nav til venstre */
+    margin-bottom: 1rem;
+}
+
+/* Primær nav (bund-nav) */
+.nav--primary .nav__list {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav--primary .nav__item a {
+    font-family: tintin;
+    text-decoration: none;
+    color: var(--color04);
+    font-weight: 500;
+}
+
+
+.info-txt-container {
+    margin: 0;
+    padding: 0%;
+    background-color: var(--color05);
+}
+
+.info-txt-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+   
+}
+
+.info-txt-container p {
+    margin-bottom: 1rem;
+}
+
+/* SØGEFELT */
+#fullscreen-search-header {
+    margin-top: 1rem;
+}
+
+#top-full-search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#fullsearchField {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+#themeContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh
+
+main {  
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
 }
